@@ -27,11 +27,11 @@ Q3 answer: egrep -i [aeiou]{4} dictionary.txt
 
 4) Write an egrep command that prints words which contain all 5 vowels "aeiou" in that order?
 
-Q4 answer:
+Q4 answer: egrep -i 'a.*e.*i.*o.*u' dictionary.txt
 
 
 5) Write an egrep command that prints which contain the vowels "aeiou" in that order
 and no other vowels.
 
-Q5 answer:
+Q5 answer: egrep -i '^[^aeiou]*a[^aeiou]*e[^aeiou]*i[^aeiou]*o[^aeiou]*u[^aeiou]*$' dictionary.txt
 
