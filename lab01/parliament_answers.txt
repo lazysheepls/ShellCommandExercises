@@ -55,19 +55,19 @@ A few electorates have multiple word names, for example, Kingsford Smith.
 Write an egrep command that will print all the lines in the file where the electorate name contains
 multiple words (separated by spaces or hyphens).
 
-Q8 answer:
+Q8 answer: egrep 'Member for [A-Za-z]+(( |-)[A-Za-z]+)+,' parliament.txt
 
 
 9) Write a shell pipeline which prints the 8 Australians states & territory in order of the number of MPs they have.
 It should print only the number of MPs, followed by the name of the states/territories.
 It should print them from fewest to most MPs.
 
-Q9 answer:
+Q9 answer: cut -d ',' -f2 parliament.txt | sort | uniq -c | sort
 
 
 10) Challenge: The most common first name for an MP is Andrew.
 Write a shell pipeline which prints the 2nd most common MP first name.
 It should print this first name and only this first name.
 
-Q10 answer:
+Q10 answer: cut -d ' ' -f2 parliament.txt | egrep -v 'Andrew' | sort | uniq -c | sort -r | head -n1 | egrep -o '[A-Za-z]+'
 
