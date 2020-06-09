@@ -11,18 +11,18 @@ Q1 answer: egrep Andrew words.txt
 
 1) Write a shell pipeline to print how many classes there are.
 
-Q1 answer:
+Q1 answer: cut -f1 classes.txt | egrep '.*' -c
 
 
 2) Write a shell pipeline to print how many different courses have classes.
 
-Q2 answer:
+Q2 answer: cut -f1 classes.txt | uniq | egrep '.*' -c
 
 
 3) Write a shell pipeline which will print the course with the most classes (and no
 other courses) and how many classes are in this course.
 
-Q3 answer:
+Q3 answer: cut -f1 classes.txt | uniq -c | sort -nr | head -n1
 
 
 4) Write a shell pipeline that prints the room most frequently-used room by CSE classes and how often it is used.
