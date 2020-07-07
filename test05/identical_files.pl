@@ -24,10 +24,16 @@ for(my $i = 1; $i<@ARGV; $i++){
 
     #Compare to base line by line
     # different number of lines
-    @base_content == @cmp_content or die "$ARGV[$i] is not identical\n";
+    if (@base_content != @cmp_content){
+        print("$ARGV[$i] is not identical\n");
+        exit;
+    }
 
     for(my $k = 0; $k < @base_content; $k++){
-        $base_content[$k] == $cmp_content[$k] or die "$ARGV[$i] is not identical\n";
+        if($base_content[$k] != $cmp_content[$k]){
+            print("$ARGV[$i] is not identical\n");
+            exit;
+        }
     }
 }
 
