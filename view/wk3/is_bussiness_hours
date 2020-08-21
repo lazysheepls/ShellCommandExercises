@@ -1,0 +1,8 @@
+#!/bin/sh
+hour=`date +%H`
+if test $hour -ge 9 -a $hour -le 17
+then
+    exit 0
+else
+    exit 1
+fi 
