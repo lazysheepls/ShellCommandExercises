@@ -102,7 +102,7 @@ basename
 `basename -s include/stdio.h` -> "stdio" (remove suffix)
 
 # Perl
-## wk4 (perl intro)
+## wk4
 perl prefix `#!/usr/bin/perl -w`
 perl prefex `#!/usr/bin/perl use strict; use warnings;`
 
@@ -167,6 +167,7 @@ get content of regex pattern match
 replace with pattern match
 `$line =~ s/(pattern1)(pattern2)(pattern3)/$3$2$1/;` this would replace the capture group only, and leave the rest of the code same
 
+## wk5
 array operation
 `@lines = ()` decalre empty array
 `@lines = (1, 3, 5)` initialize array
@@ -197,17 +198,15 @@ foreach $hash1_key1 (sort keys %hash1) {
     foreach $hash2_key2 (sort keys %{$hash1{$hash_key1}}) { .. }
 }
 ```
+`keys %hash`
+`valus %hash`
 
-push array into hash #TODO:
+push array into hash
 `push( @{ $hash{key} }, "some value ");`
 
 exists
 `if(exists($array[$i]))` check if index exist in array
 `if(exists($hash{$i}))` check if key exist in hash
-
-hash with for loop (sort on keys values) #TODO:
-`keys %hash`
-`valus %hash`
 
 split
 `@list = split(/;/, $marks);`
