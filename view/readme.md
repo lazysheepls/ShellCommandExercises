@@ -223,7 +223,7 @@ sort(wk7)
 `my @articles = sort {$b cmp $a} @files;` sort in reverse order
 `my @articles = sort {$a <=> $b} @files;` sort in numeric order ascending
 `my @articles = sort {$b <=> $a} @files;` sort in numeric order descending
-`my @eldest = sort { $age{$a} <=> $age{$b} } keys %age;` sort hash %age by value instead of keys
+`my @eldest = sort { $age{$a} <=> $age{$b} } keys %age;` sort hash key of %age by value instead of keys
 ```
 sub byage{
     $age{$a} <=> $age{$b};

@@ -8,10 +8,10 @@ for my $file (glob("*.[ch]")){
     close $fh;
 
     my $num_lines = 0;
-    while(@lines){
-        shift @lines;
-        $num_lines += 1;
-    }
-
+    # while(@lines){
+    #     shift @lines;
+    #     $num_lines += 1;
+    # }
+    $num_lines = @lines;
     printf "%7d %s\n",$num_lines,$file;
 }
