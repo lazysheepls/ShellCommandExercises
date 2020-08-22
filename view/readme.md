@@ -33,6 +33,7 @@ for and while loop
 `for i in {START..END..STEP}`  for loop (constant int only)
 `continue break` still works in shell
 `exit 0 exit 1 exit` to quit the program
+`for file in "$directory1"/*` find all files under current directory
 
 how to squeeze white spaces?
 `tr -s " "` replace multiple occurance of white space with only 1 space
@@ -259,3 +260,4 @@ sub funciton
 
 concatenate string
 `$string .= $another_string`
+
